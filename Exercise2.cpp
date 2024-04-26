@@ -102,7 +102,7 @@ int indexErr(vector<int> iVec, int index, string str)
 		if (index >= iVec.size())
 		{
 			cout << endl << "** 인덱스가 벡터 크기를 넘어감 **"
-				<< endl << "[재입력]" << endl;
+				<< endl << endl << "[재입력]";
 		}
 
 		cout << endl << str;

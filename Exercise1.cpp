@@ -20,7 +20,7 @@ int main()
 		}
 		else if (x <= 0 || y <= 0)
 		{
-			cout << endl << "0이나 음수는 입력할 수 없습니다." << endl;
+			cout << endl << "x와 y 모두에 양수를 입력해주세요." << endl;
 		}
 		else
 		{

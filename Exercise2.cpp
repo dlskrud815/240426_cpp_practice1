@@ -47,6 +47,7 @@ int main()
 			max = iVec[j];
 		}
 
+		//벡터 원소 두 배
 		iVec[j] = iVec[j] * 2;
 	}
 	cout << endl;

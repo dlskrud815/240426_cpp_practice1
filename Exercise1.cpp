@@ -5,7 +5,7 @@ int main()
 {
 	int x, y;
 
-	cout << "** 2차원 동적 배열 **" << endl << "( x,y에 -1 입력 시 종료)" << endl;
+	cout << "** 2차원 동적 배열 **" << endl << "( x,y에 -1 입력 시 종료 )" << endl;
 
 	while (1)
 	{

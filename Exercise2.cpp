@@ -3,6 +3,14 @@
 
 using namespace std;
 
+void printVec(vector<int> iVec)
+{
+	for (int k = 0; k < iVec.size(); k++)
+	{
+		cout << iVec[k] << " ";
+	}
+}
+
 int main()
 {
 	int num1, num2;
@@ -31,7 +39,7 @@ int main()
 	cout << endl << "벡터의 모든 원소는..\t";
 	int max = 0;
 
-	for (int j = 0; j < num1; j++)
+	for (int j = 0; j < iVec.size(); j++)
 	{
 		cout << iVec[j] << " ";
 
@@ -49,10 +57,7 @@ int main()
 	 
 	//6.벡터의 모든 원소를 두배로
 	cout << "모든 원소를 두배로..\t";
-	for (int k = 0; k < iVec.size(); k++)
-	{
-		cout << iVec[k] << " ";
-	}
+	printVec(iVec);
 
 	//345 출력 후 7 물어보고 출력 8 물어보고 출력
 	//7.인덱스를 입력받아 해당 인덱스에 있는 원소 제거
@@ -61,12 +66,8 @@ int main()
 	cin >> index1;
 
 	iVec.erase(iVec.begin() + index1);
+	printVec(iVec);
 
-	for (int k = 0; k < iVec.size(); k++)
-	{
-		cout << iVec[k] << " ";
-
-	}
 	//8.인덱스를 입력받아 해당 인덱스에 새로운 원소 삽입
 	int index2, newValue;
 	cout << endl << "원소를 삽입할 인덱스 입력..\t";
@@ -75,11 +76,7 @@ int main()
 	cin >> newValue;
 
 	iVec.insert(iVec.begin() + index2, newValue);
-
-	for (int k = 0; k < iVec.size(); k++)
-	{
-		cout << iVec[k] << " ";
-	}
+	printVec(iVec);
 
 	cout << endl;
 

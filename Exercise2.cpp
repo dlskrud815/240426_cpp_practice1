@@ -10,7 +10,8 @@ int main()
 {
 	int num1, num2;
 
-	cout << "몇 개의 정수를 입력? ";
+	cout << "** 벡터 정수 저장 프로그램 **" << endl
+		<< "몇 개의 정수를 입력? ";
 	cin >> num1;
 
 	cout << num1 << "개의 정수를 입력하세요." << endl << endl;

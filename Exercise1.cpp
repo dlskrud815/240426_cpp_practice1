@@ -14,7 +14,7 @@ int main()
 		cout << "y를 입력하세요: ";
 		cin >> y;
 
-		if (x == -1 || y == -1) {
+		if (x == -1 && y == -1) {
 			cout << endl << "종료합니다." << endl;
 			return 0;
 		}

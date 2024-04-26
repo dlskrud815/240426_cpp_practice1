@@ -50,7 +50,7 @@ int main()
 
 				for (int k = 0; k < y; k++)
 				{
-					cout << xyArr[j][k] << " ";
+					cout << xyArr[j][k] << "\t";
 				}
 			}
 

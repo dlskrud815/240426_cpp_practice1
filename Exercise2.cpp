@@ -76,7 +76,7 @@ int main()
 
 	index2 = indexErr(iVec, index2, str2);
 
-	cout << "새로운 원소 값 입력..\n";
+	cout << endl << "새로운 원소 값 입력..\n";
 	cin >> newValue;
 
 	iVec.insert(iVec.begin() + index2, newValue);

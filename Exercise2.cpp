@@ -27,9 +27,11 @@ int main()
 		iVec[i] = num2;
 	}
 
+
 	//3.벡터의 크기 출력
-	cout << endl << "벡터의 크기는..\n" << iVec.size();
+	cout << endl << "벡터의 크기는..\n" << iVec.size() << endl;
 	
+
 	//4.벡터의 모든 원소 출력
 	cout << endl << "벡터의 모든 원소는..\n";
 	int max = 0;
@@ -46,13 +48,16 @@ int main()
 
 		iVec[j] = iVec[j] * 2;
 	}
+	cout << endl;
 
 	//5.가장 큰 값을 찾아 출력
 	cout << endl << "가장 큰 값은..\n" << max << endl;
 	 
+
 	//6.벡터의 모든 원소를 두배로
-	cout << "모든 원소를 두배로..\n";
+	cout << endl << "모든 원소를 두배로..\n";
 	printVec(iVec);
+
 
 	//7.인덱스를 입력받아 해당 인덱스에 있는 원소 제거
 	int index1 = 0;
@@ -61,6 +66,7 @@ int main()
 
 	iVec.erase(iVec.begin() + index1);
 	printVec(iVec);
+
 
 	//8.인덱스를 입력받아 해당 인덱스에 새로운 원소 삽입
 	int index2 = 0, newValue;
@@ -85,6 +91,7 @@ void printVec(vector<int> iVec)
 	{
 		cout << iVec[k] << " ";
 	}
+	cout << endl;
 }
 
 int indexErr(vector<int> iVec, int index, string str)
@@ -93,7 +100,7 @@ int indexErr(vector<int> iVec, int index, string str)
 		if (index >= iVec.size())
 		{
 			cout << "** 인덱스가 벡터 크기를 넘어감 **"
-				<< endl << "[재입력]";
+				<< endl << "[재입력]" << endl;
 		}
 
 		cout << endl << str;

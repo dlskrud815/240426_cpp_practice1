@@ -1,30 +1,30 @@
-ï»¿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
 {
 	int x, y;
 
-	cout << "** 2ì°¨ì› ë™ì  ë°°ì—´ **" << endl << "( x,yì— -1 ìž…ë ¥ ì‹œ ì¢…ë£Œ)";
+	cout << "** 2Â÷¿ø µ¿Àû ¹è¿­ **" << endl << "( x,y¿¡ -1 ÀÔ·Â ½Ã Á¾·á)";
 
 	while (1)
 	{
-		cout << endl << "xë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ";
+		cout << endl << "x¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
 		cin >> x;
-		cout << "yë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ";
+		cout << "y¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
 		cin >> y;
 
 		if (x == -1 || y == -1) {
-			cout << endl << "ì¢…ë£Œí•©ë‹ˆë‹¤." << endl;
+			cout << endl << "Á¾·áÇÕ´Ï´Ù." << endl;
 			return 0;
 		}
 		else if (x <= 0 || y <= 0)
 		{
-			cout << endl << "0ì´ë‚˜ ìŒìˆ˜ëŠ” ìž…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
+			cout << endl << "0ÀÌ³ª À½¼ö´Â ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
 		}
 		else
 		{
-			//2ì°¨ì› ë™ì  ë°°ì—´ xyArr ì„ ì–¸
+			//2Â÷¿ø µ¿Àû ¹è¿­ xyArr ¼±¾ð
 			int** xyArr = new int* [x];
 			int num = 1;
 
@@ -33,7 +33,7 @@ int main()
 				xyArr[i] = new int[y];
 			}
 
-			//arr[0][0] ~ arr[x][y] ìˆœì„œëŒ€ë¡œ 1ë¶€í„° x*y ì €ìž¥
+			//arr[0][0] ~ arr[x][y] ¼ø¼­´ë·Î 1ºÎÅÍ x*y ÀúÀå
 			for (int j = 0; j < x; j++)
 			{
 				for (int k = 0; k < y; k++)
@@ -43,7 +43,7 @@ int main()
 				}
 			}
 
-			//arr[0][0] ~ arr[x][y] ì¶œë ¥
+			//arr[0][0] ~ arr[x][y] Ãâ·Â
 			for (int j = 0; j < x; j++)
 			{
 				cout << endl;
@@ -56,7 +56,7 @@ int main()
 
 			cout << endl;
 
-			//ë©”ëª¨ë¦¬ í•´ì œ
+			//¸Þ¸ð¸® ÇØÁ¦
 			for (int i = 0; i < x; i++)
 			{
 				delete[] xyArr[i];

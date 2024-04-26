@@ -3,13 +3,8 @@
 
 using namespace std;
 
-void printVec(vector<int> iVec)
-{
-	for (int k = 0; k < iVec.size(); k++)
-	{
-		cout << iVec[k] << " ";
-	}
-}
+void printVec(vector<int> iVec);
+int indexErr(vector<int> iVec, int index, string str);
 
 int main()
 {
@@ -61,34 +56,17 @@ int main()
 
 	//7.인덱스를 입력받아 해당 인덱스에 있는 원소 제거
 	int index1 = 0;
-
-	do {
-		if (index1 >= iVec.size())
-		{
-			cout << "** 인덱스가 벡터 크기를 넘어감 **" 
-				<< endl << "[재입력]";
-		}
-
-		cout << endl << "원소를 제거할 인덱스 입력..\n";
-		cin >> index1;
-	} while (index1 >= iVec.size());
+	string str1 = "원소를 제거할 인덱스 입력..\n";
+	index1 = indexErr(iVec, index1, str1);
 
 	iVec.erase(iVec.begin() + index1);
 	printVec(iVec);
 
 	//8.인덱스를 입력받아 해당 인덱스에 새로운 원소 삽입
 	int index2 = 0, newValue;
+	string str2 = "원소를 삽입할 인덱스 입력..\n";
 
-	do {
-		if (index2 >= iVec.size())
-		{
-			cout << "** 인덱스가 벡터 크기를 넘어감 **"
-				<< endl << "[재입력]";
-		}
-
-		cout << endl << "원소를 제거할 인덱스 입력..\n";
-		cin >> index2;
-	} while (index2 >= iVec.size());
+	index2 = indexErr(iVec, index2, str2);
 
 	cout << "새로운 원소 값 입력..\n";
 	cin >> newValue;
@@ -99,4 +77,28 @@ int main()
 	cout << endl;
 
 	return 0;
+}
+
+void printVec(vector<int> iVec)
+{
+	for (int k = 0; k < iVec.size(); k++)
+	{
+		cout << iVec[k] << " ";
+	}
+}
+
+int indexErr(vector<int> iVec, int index, string str)
+{
+	do {
+		if (index >= iVec.size())
+		{
+			cout << "** 인덱스가 벡터 크기를 넘어감 **"
+				<< endl << "[재입력]";
+		}
+
+		cout << endl << str;
+		cin >> index;
+	} while (index >= iVec.size());
+
+	return index;
 }

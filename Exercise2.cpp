@@ -50,6 +50,7 @@ int main()
 	}
 	cout << endl;
 
+
 	//5.가장 큰 값을 찾아 출력
 	cout << endl << "가장 큰 값은..\n" << max << endl;
 	 
@@ -99,7 +100,7 @@ int indexErr(vector<int> iVec, int index, string str)
 	do {
 		if (index >= iVec.size())
 		{
-			cout << "** 인덱스가 벡터 크기를 넘어감 **"
+			cout << endl << "** 인덱스가 벡터 크기를 넘어감 **"
 				<< endl << "[재입력]" << endl;
 		}
 

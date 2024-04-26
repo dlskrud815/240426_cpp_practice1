@@ -33,10 +33,10 @@ int main()
 	}
 
 	//3.벡터의 크기 출력
-	cout << endl << "벡터의 크기는..\t\t" << iVec.size();
+	cout << endl << "벡터의 크기는..\n" << iVec.size();
 	
 	//4.벡터의 모든 원소 출력
-	cout << endl << "벡터의 모든 원소는..\t";
+	cout << endl << "벡터의 모든 원소는..\n";
 	int max = 0;
 
 	for (int j = 0; j < iVec.size(); j++)
@@ -53,26 +53,44 @@ int main()
 	}
 
 	//5.가장 큰 값을 찾아 출력
-	cout << endl << "가장 큰 값은..\t\t" << max << endl;
+	cout << endl << "가장 큰 값은..\n" << max << endl;
 	 
 	//6.벡터의 모든 원소를 두배로
-	cout << "모든 원소를 두배로..\t";
+	cout << "모든 원소를 두배로..\n";
 	printVec(iVec);
 
-	//345 출력 후 7 물어보고 출력 8 물어보고 출력
 	//7.인덱스를 입력받아 해당 인덱스에 있는 원소 제거
-	int index1;
-	cout << endl << "원소를 제거할 인덱스 입력..\t";
-	cin >> index1;
+	int index1 = 0;
+
+	do {
+		if (index1 >= iVec.size())
+		{
+			cout << "** 인덱스가 벡터 크기를 넘어감 **" 
+				<< endl << "[재입력]";
+		}
+
+		cout << endl << "원소를 제거할 인덱스 입력..\n";
+		cin >> index1;
+	} while (index1 >= iVec.size());
 
 	iVec.erase(iVec.begin() + index1);
 	printVec(iVec);
 
 	//8.인덱스를 입력받아 해당 인덱스에 새로운 원소 삽입
-	int index2, newValue;
-	cout << endl << "원소를 삽입할 인덱스 입력..\t";
-	cin >> index2;
-	cout << "새로운 원소 값 입력..\t";
+	int index2 = 0, newValue;
+
+	do {
+		if (index2 >= iVec.size())
+		{
+			cout << "** 인덱스가 벡터 크기를 넘어감 **"
+				<< endl << "[재입력]";
+		}
+
+		cout << endl << "원소를 제거할 인덱스 입력..\n";
+		cin >> index2;
+	} while (index2 >= iVec.size());
+
+	cout << "새로운 원소 값 입력..\n";
 	cin >> newValue;
 
 	iVec.insert(iVec.begin() + index2, newValue);

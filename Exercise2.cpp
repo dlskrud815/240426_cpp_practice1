@@ -21,7 +21,7 @@ int main()
 
 	for (int i = 0; i < num1; i++)
 	{
-		cout << i << "번 째 정수: ";
+		cout << i+1 << "번 째 정수: ";
 		cin >> num2;
 
 		//2.n개의 정수를 입력 받아 벡터에 추가
